@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="parte2uno.MainPage"
+Title="Calculadora Picker">
+    <ScrollView>
+        <VerticalStackLayout Padding="5">
+            <Label Text="Numero uno" Margin="15,10"/>
+            <Border Stroke="black" StrokeThickness="1">
+                <Entry x:Name="valor1" Margin="15,0" FontSize="Large"
+Keyboard="Numeric"/>
+            </Border>
+            <Label Text="Numero dos" Margin="15,10"/>
+            <Border Stroke="black" StrokeThickness="1">
+                <Entry x:Name="valor2" Margin="15,0" FontSize="Large"
+Keyboard="Numeric"/>
+            </Border>
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label Text="Selecciona una operación:"
+VerticalOptions="Center" />
+                <Picker x:Name="operacion" Title="Operaciones"
+VerticalOptions="Center">
+                    <Picker.Items>
+                        <x:String>Suma</x:String>
+                        <x:String>Resta</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Button Text="Ejecutar"
+Clicked="Button_Clicked"
+Margin="10"/>
+            <Label x:Name="resultado"
+Margin="15,0"
+Text="Resultado"
+FontAttributes="Bold"
+FontSize="Large"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
